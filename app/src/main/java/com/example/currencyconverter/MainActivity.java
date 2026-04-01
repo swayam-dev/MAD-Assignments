@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public double convert(double amt, String from, String to){
-        if(from.equals(to))return amt;
+        if(from.equals(to)){return amt;}
         double toINR = 0;
         if(from.equals("USD")){
             toINR = amt*93;
