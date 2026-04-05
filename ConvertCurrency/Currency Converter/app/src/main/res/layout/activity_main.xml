@@ -7,33 +7,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#E6E6FA"
+    android:padding="16dp"
     tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Currency Converter"
+        android:textColor="#4B0082"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/amount"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginRight="48dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#6A5ACD"
         android:ems="10"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:hint="Enter Amount"
+        android:textColor="#4B0082"
         android:inputType="numberDecimal" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <Spinner
             android:id="@+id/currencyFrom"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="48dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
             android:entries="@array/cur"
             android:layout_weight="1" />
 
@@ -42,40 +58,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="➔"
-            android:textSize="20sp" />
+            android:textColor="#6A5ACD"
+            android:textSize="24sp" />
 
         <Spinner
             android:id="@+id/currencyTo"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="48dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
             android:entries="@array/cur"
             android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/submitBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_marginRight="48dp"
-            android:text="Button" />
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="#6A5ACD"
+            android:text="Convert Now"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:cornerRadius="12dp" />
 
         <TextView
             android:id="@+id/answerTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-
-            android:textSize="30sp"
-            android:text="TextView" />
+            android:layout_marginTop="40dp"
+            android:text="0.00"
+            android:textColor="#4B0082"
+            android:textSize="36sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>
